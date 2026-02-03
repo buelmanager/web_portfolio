@@ -1,6 +1,9 @@
 import Header from '@/components/sections/Header'
 import Hero from '@/components/sections/Hero'
 import Features from '@/components/sections/Features'
+import ProductGallery from '@/components/sections/ProductGallery'
+import CategorySelector from '@/components/sections/CategorySelector'
+import CategoryGallery from '@/components/sections/CategoryGallery'
 import FAQ from '@/components/sections/FAQ'
 import CTA from '@/components/sections/CTA'
 import Footer from '@/components/sections/Footer'
@@ -15,6 +18,9 @@ export default function Home() {
       <main>
         <Hero />
         <Features />
+        <ProductGallery />
+        <CategorySelector />
+        <CategoryGallery />
         <FAQ />
         <CTA />
       </main>

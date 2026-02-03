@@ -30,8 +30,29 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <a href="#hero" className="text-2xl font-bold">
-            <span className="text-primary">로터스</span>건설
+          <a href="#hero" className="flex items-center gap-3 group">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" className="transition-transform group-hover:scale-105">
+              <rect x="4" y="14" width="8" height="14" fill="currentColor" className="text-primary"/>
+              <rect x="14" y="8" width="8" height="20" fill="currentColor" className="text-primary/80"/>
+              <rect x="24" y="18" width="4" height="10" fill="currentColor" className="text-primary/60"/>
+              <rect x="2" y="28" width="28" height="2" fill="currentColor" className="text-white/30"/>
+              <rect x="6" y="16" width="2" height="2" fill="currentColor" className="text-white/40"/>
+              <rect x="6" y="20" width="2" height="2" fill="currentColor" className="text-white/40"/>
+              <rect x="6" y="24" width="2" height="2" fill="currentColor" className="text-white/40"/>
+              <rect x="16" y="10" width="2" height="2" fill="currentColor" className="text-white/40"/>
+              <rect x="16" y="14" width="2" height="2" fill="currentColor" className="text-white/40"/>
+              <rect x="16" y="18" width="2" height="2" fill="currentColor" className="text-white/40"/>
+              <rect x="16" y="22" width="2" height="2" fill="currentColor" className="text-white/40"/>
+              <rect x="20" y="14" width="2" height="2" fill="currentColor" className="text-white/40"/>
+              <rect x="20" y="18" width="2" height="2" fill="currentColor" className="text-white/40"/>
+            </svg>
+            <div className="flex flex-col leading-none">
+              <span className="text-xl font-bold tracking-tight">
+                <span className="text-primary">로터스</span>
+                <span className="text-white">건설</span>
+              </span>
+              <span className="text-[10px] text-gray-400 tracking-[0.15em] uppercase">Construction</span>
+            </div>
           </a>
 
           <nav className="hidden md:flex items-center gap-8">

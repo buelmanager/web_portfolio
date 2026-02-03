@@ -1,4 +1,4 @@
 1:"$Sreact.fragment"
 2:I[2118,["/projects/aurora/_next/static/chunks/a49c8cd6745bbca0.js","/projects/aurora/_next/static/chunks/4e2c4ebdd4090d7e.js"],"default"]
 3:I[60645,["/projects/aurora/_next/static/chunks/a49c8cd6745bbca0.js","/projects/aurora/_next/static/chunks/4e2c4ebdd4090d7e.js"],"default"]
-0:{"buildId":"-g0-IhWXEaHmaCKbIfAG5","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"GDOTk3uj0vp_cTim_GNKI","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}

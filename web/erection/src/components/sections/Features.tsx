@@ -1,49 +1,49 @@
 'use client'
 
-import { Monitor, Server, Laptop, Cpu, Tv, Refrigerator, Wrench, Shield } from 'lucide-react'
+import { Building2, Home, Store, Paintbrush, HardHat, Ruler, Shield, Handshake } from 'lucide-react'
 import FadeInSection from '@/components/animations/FadeInSection'
 import TextReveal from '@/components/animations/TextReveal'
 
 const features = [
   {
-    icon: Monitor,
-    title: '데스크탑 & 워크스테이션',
-    description: 'Dell PRECISION, HP Z시리즈 등 전문가급 워크스테이션',
+    icon: Building2,
+    title: '신축 건설',
+    description: '주거 및 상업용 건물 신축 설계부터 완공까지',
   },
   {
-    icon: Server,
-    title: '서버 솔루션',
-    description: 'POWEREDGE, ProLiant 등 엔터프라이즈 서버',
+    icon: Home,
+    title: '주거 리모델링',
+    description: '아파트, 빌라, 단독주택 인테리어 및 리모델링',
   },
   {
-    icon: Laptop,
-    title: '노트북 & 태블릿',
-    description: '비즈니스 노트북부터 하이엔드 게이밍까지',
+    icon: Store,
+    title: '상업 공간 시공',
+    description: '사무실, 매장, 식당 등 상업 인테리어 전문',
   },
   {
-    icon: Cpu,
-    title: '컴퓨터 부품',
-    description: 'CPU, GPU, RAM, SSD 등 고성능 부품',
+    icon: Paintbrush,
+    title: '인테리어 디자인',
+    description: '트렌디한 감각의 맞춤형 공간 디자인',
   },
   {
-    icon: Tv,
-    title: '대형 가전',
-    description: 'TV, 냉장고, 세탁기 등 프리미엄 가전',
+    icon: HardHat,
+    title: '리모델링 공사',
+    description: '구조 변경부터 마감까지 토탈 리모델링',
   },
   {
-    icon: Refrigerator,
-    title: '생활 가전',
-    description: '주방가전, 계절가전, 음향기기',
-  },
-  {
-    icon: Wrench,
-    title: '중고 & 리퍼비시',
-    description: '검증된 품질의 가성비 제품',
+    icon: Ruler,
+    title: '실측 및 견적',
+    description: '무료 현장 방문 실측 및 정확한 견적 제공',
   },
   {
     icon: Shield,
-    title: 'B2B 전문 서비스',
-    description: '대량 구매, 세금계산서, 맞춤 견적',
+    title: '품질 보증',
+    description: '시공 후 하자 보수 및 A/S 보증 서비스',
+  },
+  {
+    icon: Handshake,
+    title: '원스톱 서비스',
+    description: '설계, 인허가, 시공, 사후관리까지 한번에',
   },
 ]
 
@@ -52,23 +52,23 @@ export default function Features() {
     <section id="features" className="py-24 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <TextReveal 
-            text="프리미엄 서비스의 모든 것" 
+          <TextReveal
+            text="전문 시공 서비스"
             className="text-3xl md:text-5xl font-bold tracking-tight mb-4"
           />
           <FadeInSection delay={0.3}>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              IT 하드웨어부터 생활가전까지, 25년 노하우로 
+              25년 건설 노하우로 주거부터 상업 공간까지
               <br className="hidden md:block" />
-              엄선된 2,000여 종의 프리미엄 제품을 만나보세요.
+              고객의 꿈을 현실로 만들어드립니다.
             </p>
           </FadeInSection>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <FadeInSection 
-              key={feature.title} 
+            <FadeInSection
+              key={feature.title}
               delay={index * 0.1}
               direction="up"
             >

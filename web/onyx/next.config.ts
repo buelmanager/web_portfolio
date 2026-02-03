@@ -6,6 +6,16 @@ const nextConfig: NextConfig = {
   assetPrefix: '/projects/onyx',
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'videos.pexels.com',
+      },
+    ],
   },
 };
 

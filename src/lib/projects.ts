@@ -34,7 +34,6 @@ const projectImages: Record<string, string> = {
   'onyx': 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200&h=800',
   'vertex': 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200&h=800',
   'zenith': 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200&h=800',
-  'smart_academy': 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1200&h=800',
   'homepage-landing': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200&h=800',
   'checkmate-landing': 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&q=80&w=1200&h=800',
 };
@@ -148,12 +147,18 @@ export function getProjects(): Project[] {
     .map(dirent => dirent.name)
     .filter(name => !name.startsWith('.'));
   
-  const projects: Project[] = folders.map(folder => {
+  const projects: Project[] = folders
+    .filter(folder => {
+      // Only include projects that have c_readme.md
+      const readmePath = path.join(webDir, folder, 'c_readme.md');
+      return fs.existsSync(readmePath);
+    })
+    .map(folder => {
     const projectPath = path.join(webDir, folder);
     const srcPath = path.join(projectPath, 'src');
     const packageJsonPath = path.join(projectPath, 'package.json');
     const readmePath = path.join(projectPath, 'c_readme.md');
-    
+
     const hasSrcFolder = fs.existsSync(srcPath);
     const hasIndexHtml = fs.existsSync(path.join(projectPath, 'index.html'));
     const isComplete = hasSrcFolder || hasIndexHtml;
@@ -196,7 +201,8 @@ export function getProjects(): Project[] {
     
     const staticBuilds = [
       'page1', 'page2', 'page3', 'page4', 'page5', 'dc_home',
-      'atlas', 'aurora', 'cook', 'energy_solution', 'onyx', 'vertex', 'zenith'
+      'atlas', 'aurora', 'cook', 'energy_solution', 'erection', 'onyx', 'vertex', 'zenith',
+      'checkmate-landing', 'homepage-landing'
     ];
     const hasStaticBuild = staticBuilds.includes(folder);
     const demoUrl = hasStaticBuild ? `/projects/${folder}/index.html` : '';
@@ -218,8 +224,20 @@ export function getProjects(): Project[] {
     };
   });
   
-  // Sort: complete first, then by name
+  // Priority order - featured projects first
+  const priorityOrder = ['zenith'];
+
+  // Sort: priority first, then complete, then by name
   return projects.sort((a, b) => {
+    const aPriority = priorityOrder.indexOf(a.id);
+    const bPriority = priorityOrder.indexOf(b.id);
+
+    // Priority projects come first
+    if (aPriority !== -1 && bPriority === -1) return -1;
+    if (bPriority !== -1 && aPriority === -1) return 1;
+    if (aPriority !== -1 && bPriority !== -1) return aPriority - bPriority;
+
+    // Then by completion status
     if (a.isComplete !== b.isComplete) {
       return a.isComplete ? -1 : 1;
     }

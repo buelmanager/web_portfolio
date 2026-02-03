@@ -1,0 +1,5 @@
+:HL["/projects/erection/_next/static/chunks/90daac8ffe8e2817.css","style"]
+:HL["/projects/erection/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/projects/erection/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/projects/erection/_next/static/chunks/3f10e08315233984.css","style"]
+0:{"buildId":"DssCIdourGUP9bF1nEfxn","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  basePath: '/projects/erection',
   images: {
     remotePatterns: [
       {
@@ -12,6 +14,7 @@ const nextConfig: NextConfig = {
         hostname: 'cdn.pixabay.com',
       },
     ],
+    unoptimized: true,
   },
 };
 

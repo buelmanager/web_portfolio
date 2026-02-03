@@ -23,9 +23,12 @@ export default function Preloader() {
         fadeOut ? 'opacity-0' : 'opacity-100'
       }`}
     >
-      <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-8">
+      <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-2">
         o<span className="text-primary">ny</span>x
       </h1>
+      <p className="text-sm text-text-muted tracking-[0.3em] uppercase mb-8">
+        Fine Jewelry & Accessories
+      </p>
       
       <div className="relative w-12 h-12">
         <svg 
