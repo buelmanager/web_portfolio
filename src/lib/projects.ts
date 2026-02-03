@@ -68,7 +68,9 @@ export function getProjects(): Project[] {
     const packageJsonPath = path.join(projectPath, 'package.json');
     const readmePath = path.join(projectPath, 'c_readme.md');
     
-    const isComplete = fs.existsSync(srcPath);
+    const hasSrcFolder = fs.existsSync(srcPath);
+    const hasIndexHtml = fs.existsSync(path.join(projectPath, 'index.html'));
+    const isComplete = hasSrcFolder || hasIndexHtml;
     const hasPackageJson = fs.existsSync(packageJsonPath);
     const hasReadme = fs.existsSync(readmePath);
     
