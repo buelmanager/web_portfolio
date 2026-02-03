@@ -1,0 +1,202 @@
+{
+  "id": "page5",
+  "name": "VELOX",
+  "nameEn": "VELOX",
+  "category": "Electric Vehicle Brand",
+  "concept": "포르쉐 웹사이트 스타일의 프리미엄 전기차 브랜드. 대담한 타이포그래피, 다이나믹 그리드, 비대칭 레이아웃이 특징.",
+  "tagline": "꿈을 향해 달리다",
+  "inspiration": "Porsche (porsche.com)",
+
+  "design": {
+    "aesthetic": "Bold Dynamic Luxury, Automotive Excellence",
+    "colorPalette": {
+      "primary": "#FAFAF8",
+      "secondary": "#0A0A0A",
+      "accent": "#C9A962",
+      "accentDark": "#B8860B",
+      "bronze": "#8B7355",
+      "cream": "#F5F3EE",
+      "warmGray": "#3D3D3B"
+    },
+    "colorDescription": "따뜻한 크림색 배경에 샴페인 골드/다크 브론즈 악센트. 럭셔리하고 세련된 전기차 이미지",
+    "typography": {
+      "headline": {
+        "font": "Pretendard",
+        "weights": [600, 700, 800],
+        "style": "굵고 임팩트 있는 타이틀"
+      },
+      "serif": {
+        "font": "Noto Serif KR",
+        "weights": [300, 400],
+        "style": "서브텍스트에 우아함 추가"
+      },
+      "korean": {
+        "letterSpacing": "-0.03em to -0.05em",
+        "lineHeight": "1.6 - 1.8",
+        "fontWeight": "영문보다 한 단계 낮게"
+      }
+    },
+    "layout": {
+      "type": "Asymmetric Dynamic Grid",
+      "spacing": "대담한 비대칭 여백",
+      "navigation": "고정 헤더, 스크롤 시 배경 변화"
+    }
+  },
+
+  "interactions": {
+    "smoothScroll": {
+      "library": "Lenis",
+      "duration": 1.4,
+      "wheelMultiplier": 0.8,
+      "description": "묵직하고 럭셔리한 느낌의 스크롤"
+    },
+    "heroAnimation": {
+      "video": "풀스크린 배경 비디오",
+      "mask": "대각선 clip-path 리빌",
+      "title": "순차 등장 애니메이션",
+      "specs": "하단 스펙 바 페이드인"
+    },
+    "modelShowcase": {
+      "grid": "비대칭 그리드 (첫 카드 2x2)",
+      "reveal": "대각선 clip-path 리빌",
+      "hover": "악센트 컬러 오버레이 + 이미지 스케일"
+    },
+    "performanceSection": {
+      "parallax": "배경 이미지 패럴랙스",
+      "counter": "숫자 카운터 애니메이션",
+      "stats": ["2.8초 (0-100)", "680PS", "850Nm", "330km/h"]
+    },
+    "horizontalScroll": {
+      "type": "핀 고정 가로 스크롤",
+      "slides": ["공기역학", "섀시", "파워트레인", "인테리어"],
+      "progress": "진행률 인디케이터",
+      "scrub": true
+    },
+    "heritageSection": {
+      "layout": "분할 레이아웃 (이미지 + 텍스트)",
+      "timeline": ["1974", "1995", "2020", "2024"],
+      "imageReveal": "대각선 clip-path",
+      "textReveal": "단어별 페이드인"
+    },
+    "buttonEffects": {
+      "primary": "그라데이션 배경 + fill 애니메이션",
+      "outline": "border → fill 전환"
+    }
+  },
+
+  "sections": [
+    {
+      "name": "Hero",
+      "description": "비디오 배경 + 대각선 마스크",
+      "elements": ["배경 비디오", "대형 한글 타이틀 (꿈을 향해 달리다)", "스펙 바", "스크롤 인디케이터"],
+      "animation": "대각선 clip-path 리빌"
+    },
+    {
+      "name": "Model Showcase",
+      "description": "차량 모델 그리드",
+      "models": [
+        {"name": "GT-S", "tagline": "순수한 스포츠", "specs": "0-100 2.8초, 680마력"},
+        {"name": "GT-E", "tagline": "전기의 미래", "specs": "0-100 3.2초, 450km 주행"},
+        {"name": "GT-X", "tagline": "모든 길 위에서", "specs": "0-100 4.1초, AWD"}
+      ],
+      "layout": "비대칭 그리드"
+    },
+    {
+      "name": "Performance",
+      "description": "퍼포먼스 스펙 섹션",
+      "background": "다크 + 패럴랙스 이미지",
+      "stats": {
+        "acceleration": "2.8초",
+        "power": "680PS",
+        "torque": "850Nm",
+        "topSpeed": "330km/h"
+      },
+      "animation": "카운터 애니메이션"
+    },
+    {
+      "name": "Horizontal Scroll",
+      "description": "기술 상세 가로 스크롤",
+      "slides": [
+        {"title": "공기역학", "desc": "0.23 Cd 드래그 계수"},
+        {"title": "섀시", "desc": "카본 파이버 모노코크"},
+        {"title": "파워트레인", "desc": "듀얼 모터 AWD"},
+        {"title": "인테리어", "desc": "지속 가능한 소재"}
+      ],
+      "pinned": true
+    },
+    {
+      "name": "Heritage",
+      "description": "브랜드 역사 타임라인",
+      "timeline": [
+        {"year": "1974", "event": "브랜드 설립"},
+        {"year": "1995", "event": "첫 스포츠카 출시"},
+        {"year": "2020", "event": "전기차 시대 진입"},
+        {"year": "2024", "event": "GT-S 글로벌 런칭"}
+      ],
+      "layout": "분할 (이미지 + 타임라인)"
+    },
+    {
+      "name": "Footer",
+      "description": "뉴스레터 + 네비게이션",
+      "features": ["뉴스레터 구독 폼", "4열 네비게이션", "소셜 링크"],
+      "background": "다크"
+    }
+  ],
+
+  "techStack": {
+    "framework": "React 18",
+    "bundler": "Vite",
+    "styling": "CSS (Custom Properties)",
+    "animation": "GSAP 3.12.5",
+    "scrollPlugin": "GSAP ScrollTrigger",
+    "smoothScroll": "Lenis 1.1.13"
+  },
+
+  "components": [
+    "Header.jsx / Header.css",
+    "Hero.jsx / Hero.css",
+    "ModelShowcase.jsx / ModelShowcase.css",
+    "Performance.jsx / Performance.css",
+    "HorizontalSection.jsx / HorizontalSection.css",
+    "Heritage.jsx / Heritage.css",
+    "Footer.jsx / Footer.css"
+  ],
+
+  "cssVariables": {
+    "colors": "var(--color-velox-gold), var(--color-velox-red), var(--color-cream)",
+    "typography": "var(--font-primary), var(--font-serif)",
+    "spacing": "var(--space-xs) to var(--space-4xl)",
+    "transitions": "var(--transition-fast) to var(--transition-slowest)"
+  },
+
+  "responsive": {
+    "breakpoints": {
+      "desktop": "1024px+",
+      "tablet": "768px - 1023px",
+      "mobile": "< 768px"
+    },
+    "mobileAdjustments": [
+      "비디오 → 이미지 대체 고려",
+      "가로 스크롤 → 수직 스크롤",
+      "그리드 단일 컬럼",
+      "스펙 바 축소",
+      "폰트 사이즈 조정"
+    ]
+  },
+
+  "files": {
+    "root": ["index.html", "package.json", "vite.config.js"],
+    "src": ["App.jsx", "main.jsx"],
+    "styles": ["variables.css", "global.css"],
+    "components": ["*.jsx", "*.css"]
+  },
+
+  "commands": {
+    "dev": "npm run dev",
+    "build": "npm run build",
+    "preview": "npm run preview"
+  },
+
+  "createdAt": "2024-01-27",
+  "lastUpdated": "2024-01-27"
+}

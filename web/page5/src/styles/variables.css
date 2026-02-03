@@ -1,0 +1,103 @@
+/* ============================================
+   VELOX - CSS Variables
+   Porsche-inspired Dynamic Design
+   ============================================ */
+
+:root {
+  /* Colors - Luxurious & Sophisticated */
+  --color-white: #FAFAF8;
+  --color-black: #0A0A0A;
+  --color-velox-red: #B8860B; /* 다크 골드 */
+  --color-velox-gold: #C9A962; /* 샴페인 골드 */
+  --color-velox-bronze: #8B7355; /* 브론즈 */
+  --color-velox-dark: #1A1A18; /* 다크 배경 */
+  --color-turbonite: #3D3D3B; /* 메탈릭 그레이 */
+  --color-silver: #A8A8A6;
+  --color-cream: #F5F3EE; /* 크림 배경 */
+
+  /* Grays - Warm Tones */
+  --color-gray-50: #FAF9F7;
+  --color-gray-100: #F5F4F0;
+  --color-gray-200: #E8E6E1;
+  --color-gray-300: #D4D1C9;
+  --color-gray-400: #A09D94;
+  --color-gray-500: #706D64;
+  --color-gray-600: #4A4842;
+  --color-gray-700: #36342F;
+  --color-gray-800: #1F1E1B;
+  --color-gray-900: #121110;
+
+  /* Typography - 한글 최적화 */
+  --font-primary: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-display: 'Pretendard', sans-serif;
+  --font-serif: 'Noto Serif KR', serif;
+
+  /* Font Weights - 한글은 영문보다 한 단계 낮게 */
+  --weight-thin: 200;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  --weight-black: 900;
+
+  /* Font Sizes - 한글은 영문의 93-95% */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.5rem;
+  --text-6xl: 5rem;
+  --text-7xl: 7rem;
+  --text-8xl: 9rem;
+
+  /* Line Heights - 한글은 넉넉하게 */
+  --leading-none: 1;
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+  --leading-loose: 2;
+
+  /* Letter Spacing - 한글은 좁게 (-0.02em ~ -0.05em) */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.03em;
+  --tracking-normal: -0.01em;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+  --tracking-widest: 0.2em;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+  --space-2xl: 8rem;
+  --space-3xl: 12rem;
+  --space-4xl: 16rem;
+
+  /* Container */
+  --container-padding: clamp(20px, 5vw, 100px);
+  --container-max: 1600px;
+
+  /* Header */
+  --header-height: 90px;
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slower: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slowest: 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Easing */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+}

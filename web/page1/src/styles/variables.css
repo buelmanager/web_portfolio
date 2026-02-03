@@ -1,0 +1,47 @@
+/* ============================================
+   MAISON NOIR - Haute Couture Fashion House
+   CSS Variables
+   ============================================ */
+
+:root {
+  /* Colors */
+  --color-cream: #F5F3EE;
+  --color-cream-dark: #EAE6DD;
+  --color-gold: #907533;
+  --color-gold-light: #B8985B;
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-light: #2D2D2D;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-gray: #8A8A8A;
+  --color-gray-light: #C4C4C4;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
+  --spacing-xl: 80px;
+  --spacing-2xl: 120px;
+
+  /* Layout */
+  --container-padding: 20px;
+  --header-height: 80px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 32px;
+    --header-height: 64px;
+  }
+}

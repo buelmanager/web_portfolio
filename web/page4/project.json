@@ -1,0 +1,174 @@
+{
+  "id": "page4",
+  "name": "NOIR COFFEE",
+  "nameEn": "NOIR COFFEE",
+  "category": "Premium Coffee Brand",
+  "concept": "Leica 카메라 웹사이트 스타일의 프리미엄 커피 브랜드. 극도의 미니멀리즘과 화이트 스페이스 중심 디자인.",
+  "tagline": "커피의 본질을 담다",
+  "inspiration": "Leica Camera (leica-camera.com)",
+
+  "design": {
+    "aesthetic": "Extreme Minimalism, Image-centric",
+    "colorPalette": {
+      "primary": "#FFFFFF",
+      "secondary": "#F5F5F5",
+      "text": "#1A1A1A",
+      "accent": "#C41E3A",
+      "muted": "#888888"
+    },
+    "colorDescription": "순백의 배경에 블랙 텍스트, 커피 체리 레드 악센트. 극도의 정제된 미니멀리즘",
+    "typography": {
+      "primary": {
+        "font": "Pretendard",
+        "weights": [200, 300, 400, 500, 600],
+        "style": "한글 최적화 고딕"
+      },
+      "korean": {
+        "letterSpacing": "-0.03em",
+        "lineHeight": 1.7,
+        "fontWeight": "영문보다 한 단계 낮게"
+      }
+    },
+    "layout": {
+      "type": "Clean Grid with White Space",
+      "spacing": "극도로 넓은 여백",
+      "imageRatio": "이미지 중심, 텍스트 최소화",
+      "navigation": "좌측 로고, 우측 최소 메뉴"
+    }
+  },
+
+  "interactions": {
+    "smoothScroll": {
+      "library": "Lenis",
+      "duration": 1.2,
+      "wheelMultiplier": 1,
+      "description": "깨끗하고 정제된 스크롤"
+    },
+    "cursor": {
+      "type": "Custom Circle Cursor",
+      "size": {
+        "default": "20px",
+        "hover": "60px"
+      },
+      "mixBlendMode": "difference",
+      "transition": "0.3s ease"
+    },
+    "heroAnimation": {
+      "image": "clip-path: circle 확장",
+      "title": "단어별 순차 등장",
+      "subtitle": "fade up"
+    },
+    "philosophySection": {
+      "text": "단어별 opacity 0 → 1",
+      "stagger": "0.05s",
+      "trigger": "스크롤 기반"
+    },
+    "productShowcase": {
+      "cards": "stagger 등장 (y: 60 → 0)",
+      "hover": "이미지 스케일 1.05",
+      "overlay": "그라데이션 오버레이"
+    },
+    "gallerySection": {
+      "reveal": "원형 clip-path 확장",
+      "parallax": "y축 이동",
+      "scale": "스크롤 기반 스케일"
+    },
+    "buttonHover": {
+      "type": "fill animation",
+      "direction": "left to right",
+      "duration": "0.5s"
+    }
+  },
+
+  "sections": [
+    {
+      "name": "Hero",
+      "description": "원형 마스크로 나타나는 이미지",
+      "elements": ["대형 커피 이미지", "NOIR COFFEE 타이틀", "브랜드 태그라인"],
+      "animation": "clip-path: circle(0%) → circle(100%)"
+    },
+    {
+      "name": "Philosophy",
+      "description": "브랜드 철학",
+      "content": "커피의 본질을 탐구하는 여정",
+      "animation": "단어별 순차 등장",
+      "layout": "중앙 정렬 대형 텍스트"
+    },
+    {
+      "name": "Product Showcase",
+      "description": "제품 그리드",
+      "products": ["에티오피아 예가체프", "콜롬비아 수프리모", "케냐 AA", "과테말라 안티구아"],
+      "layout": "4컬럼 그리드",
+      "interaction": "호버 시 상세 정보"
+    },
+    {
+      "name": "Gallery",
+      "description": "이미지 갤러리",
+      "layout": "풀스크린 이미지",
+      "animation": "원형 clip-path 리빌",
+      "parallax": "스크롤 기반"
+    },
+    {
+      "name": "Experience",
+      "description": "커피 경험 소개",
+      "features": ["로스팅", "브루잉", "테이스팅", "페어링"],
+      "layout": "수평 슬라이드"
+    },
+    {
+      "name": "Locations",
+      "description": "매장 위치",
+      "stores": ["서울 성수", "서울 한남", "부산 해운대"],
+      "interaction": "지도 인터랙션"
+    }
+  ],
+
+  "techStack": {
+    "framework": "React 18",
+    "bundler": "Vite",
+    "styling": "CSS Modules",
+    "animation": "GSAP 3.12.5",
+    "scrollPlugin": "GSAP ScrollTrigger",
+    "smoothScroll": "Lenis 1.1.13"
+  },
+
+  "components": [
+    "CustomCursor.jsx",
+    "Header.jsx",
+    "Hero.jsx",
+    "Philosophy.jsx",
+    "ProductShowcase.jsx",
+    "Gallery.jsx",
+    "Experience.jsx",
+    "Footer.jsx"
+  ],
+
+  "responsive": {
+    "breakpoints": {
+      "desktop": "1024px+",
+      "tablet": "768px - 1023px",
+      "mobile": "< 768px"
+    },
+    "mobileAdjustments": [
+      "커스텀 커서 비활성화",
+      "그리드 2 → 1 컬럼",
+      "이미지 비율 조정",
+      "터치 스와이프 지원"
+    ]
+  },
+
+  "files": {
+    "root": ["index.html", "package.json", "vite.config.js"],
+    "src": ["App.jsx", "main.jsx"],
+    "styles": ["variables.css", "global.css"],
+    "components": ["*.jsx", "*.css"]
+  },
+
+  "commands": {
+    "dev": "npm run dev",
+    "build": "npm run build",
+    "preview": "npm run preview"
+  },
+
+  "createdAt": "2024-01-27",
+  "lastUpdated": "2024-01-27"
+}

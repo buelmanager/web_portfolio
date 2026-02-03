@@ -1,0 +1,140 @@
+{
+  "id": "page2",
+  "name": "KRONOS LEGACY",
+  "nameEn": "KRONOS LEGACY",
+  "category": "Luxury Watch Brand",
+  "concept": "스위스 럭셔리 시계 브랜드. 시간을 초월한 장인정신과 정밀한 공학의 결합.",
+  "tagline": "Mastering Time Since 1892",
+
+  "design": {
+    "aesthetic": "Dark Luxury, Swiss Precision",
+    "colorPalette": {
+      "primary": "#0D0D0D",
+      "secondary": "#1A1A1A",
+      "accent": "#C9A962",
+      "accentDark": "#8B7355",
+      "text": "#FFFFFF",
+      "muted": "#888888"
+    },
+    "colorDescription": "딥 블랙 배경에 샴페인 골드 악센트. 고급 시계의 무게감 표현",
+    "typography": {
+      "headline": {
+        "font": "Playfair Display",
+        "weights": [300, 400, 500, 600],
+        "style": "클래식 세리프로 전통 표현"
+      },
+      "body": {
+        "font": "Montserrat",
+        "weights": [300, 400, 500],
+        "style": "모던 산세리프로 정밀함 표현"
+      },
+      "accent": {
+        "letterSpacing": "0.2em",
+        "textTransform": "uppercase"
+      }
+    },
+    "layout": {
+      "type": "Immersive Dark Theme",
+      "spacing": "넓은 여백과 중앙 정렬",
+      "navigation": "미니멀 상단바"
+    }
+  },
+
+  "interactions": {
+    "smoothScroll": {
+      "library": "Lenis",
+      "duration": 1.4,
+      "wheelMultiplier": 0.8,
+      "description": "묵직하고 고급스러운 스크롤"
+    },
+    "heroAnimation": {
+      "watchImage": "스케일 + 회전 애니메이션",
+      "title": "글자별 페이드인",
+      "particles": "골드 파티클 플로팅"
+    },
+    "watchShowcase": {
+      "3dRotation": "마우스 움직임 기반 틸트",
+      "reflection": "시계 아래 반사 효과",
+      "glow": "골드 글로우 애니메이션"
+    },
+    "timelineSection": {
+      "scroll": "수평 스크롤 타임라인",
+      "markers": "연도별 마커 애니메이션",
+      "images": "스크롤 기반 페이드"
+    },
+    "craftsmanshipSection": {
+      "parallax": "다층 패럴랙스 이미지",
+      "text": "스크롤 기반 텍스트 리빌",
+      "details": "호버 시 상세 정보 표시"
+    }
+  },
+
+  "sections": [
+    {
+      "name": "Hero",
+      "description": "시계 중심의 임팩트 있는 히어로",
+      "elements": ["대형 시계 이미지", "KRONOS LEGACY 타이틀", "Since 1892 서브타이틀", "골드 파티클 효과"]
+    },
+    {
+      "name": "Heritage",
+      "description": "브랜드 역사와 전통",
+      "timeline": ["1892 창립", "1920 첫 자동시계", "1965 크로노그래프", "2024 현재"],
+      "layout": "수평 스크롤 타임라인"
+    },
+    {
+      "name": "Collections",
+      "description": "시계 컬렉션 쇼케이스",
+      "collections": ["Heritage Classic", "Sport Chronograph", "Diver Professional", "Limited Edition"],
+      "layout": "풀스크린 슬라이드"
+    },
+    {
+      "name": "Craftsmanship",
+      "description": "장인정신 소개",
+      "features": ["Swiss Movement", "Hand Assembly", "100-Hour Testing", "Lifetime Warranty"],
+      "layout": "이미지 + 텍스트 교차"
+    },
+    {
+      "name": "Specifications",
+      "description": "기술 사양",
+      "specs": ["케이스 소재", "무브먼트", "방수", "파워리저브"],
+      "animation": "숫자 카운터 애니메이션"
+    },
+    {
+      "name": "Store Locator",
+      "description": "매장 찾기",
+      "locations": ["Geneva", "Zurich", "New York", "Tokyo", "Seoul"]
+    }
+  ],
+
+  "techStack": {
+    "markup": "HTML5",
+    "styling": "CSS3 (Custom Properties)",
+    "scripting": "Vanilla JavaScript",
+    "animation": "GSAP 3.12.5",
+    "scrollPlugin": "GSAP ScrollTrigger",
+    "smoothScroll": "Lenis 1.1.13"
+  },
+
+  "responsive": {
+    "breakpoints": {
+      "desktop": "1024px+",
+      "tablet": "768px - 1023px",
+      "mobile": "< 768px"
+    },
+    "mobileAdjustments": [
+      "시계 이미지 크기 조정",
+      "수평 스크롤 → 수직 스크롤",
+      "타임라인 수직 변환",
+      "터치 제스처 지원"
+    ]
+  },
+
+  "files": [
+    "index.html",
+    "styles.css",
+    "main.js"
+  ],
+
+  "createdAt": "2024-01-27",
+  "lastUpdated": "2024-01-27"
+}

@@ -1,0 +1,59 @@
+/* ============================================
+   MAISON ÉLISE - Luxury Leather Goods
+   CSS Variables
+   ============================================ */
+
+:root {
+  /* Colors - Elegant Luxury Palette */
+  --color-black: #000000;
+  --color-black-soft: #0a0a0a;
+  --color-charcoal: #141414;
+  --color-charcoal-light: #1f1f1f;
+  --color-gray-dark: #2a2a2a;
+  --color-gray: #4a4a4a;
+  --color-gray-light: #8a8a8a;
+  --color-silver: #c0c0c0;
+  --color-white: #ffffff;
+  --color-white-soft: #f5f5f5;
+  --color-gold: #c9a962;
+  --color-gold-light: #d4bc7e;
+  --color-tan: #c4a77d;
+  --color-burgundy: #722f37;
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
+  --spacing-xl: 80px;
+  --spacing-2xl: 120px;
+  --spacing-3xl: 200px;
+
+  /* Layout */
+  --container-padding: 24px;
+  --header-height: 80px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-luxury: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 48px;
+    --header-height: 100px;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --container-padding: 80px;
+  }
+}

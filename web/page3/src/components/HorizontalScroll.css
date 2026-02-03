@@ -1,0 +1,140 @@
+/* Horizontal Scroll Section */
+.horizontal-scroll {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-charcoal);
+}
+
+.horizontal-header {
+  position: absolute;
+  top: var(--spacing-xl);
+  left: var(--container-padding);
+  z-index: 10;
+}
+
+.horizontal-title {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-display);
+  font-size: clamp(40px, 8vw, 100px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.title-light {
+  color: var(--color-gray-light);
+  font-weight: 300;
+}
+
+.title-accent {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.horizontal-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  will-change: transform;
+}
+
+.timeline-track {
+  display: flex;
+  gap: var(--spacing-xl);
+  padding: 0 calc(50vw - 200px);
+  padding-top: var(--spacing-3xl);
+}
+
+@media (min-width: 768px) {
+  .timeline-track {
+    gap: var(--spacing-2xl);
+    padding: 0 calc(50vw - 250px);
+    padding-top: var(--spacing-2xl);
+  }
+}
+
+.timeline-card {
+  flex-shrink: 0;
+  width: 320px;
+}
+
+@media (min-width: 768px) {
+  .timeline-card {
+    width: 450px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .timeline-card {
+    width: 500px;
+  }
+}
+
+.timeline-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/2;
+  margin-bottom: var(--spacing-md);
+  background-color: var(--color-black);
+}
+
+.timeline-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+.timeline-content {
+  padding-right: var(--spacing-lg);
+}
+
+.timeline-year {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 8vw, 80px);
+  font-weight: 400;
+  color: var(--color-gold);
+  line-height: 1;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.timeline-title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 400;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-xs);
+}
+
+.timeline-desc {
+  font-size: 14px;
+  color: var(--color-gray-light);
+  line-height: 1.7;
+}
+
+/* Progress Line */
+.horizontal-progress {
+  position: absolute;
+  bottom: var(--spacing-xl);
+  left: var(--container-padding);
+  right: var(--container-padding);
+}
+
+.progress-line {
+  height: 1px;
+  background-color: var(--color-gray);
+  position: relative;
+}
+
+.progress-line-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: var(--color-gold);
+  transition: width 0.1s ease;
+}

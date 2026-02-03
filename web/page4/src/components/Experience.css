@@ -1,0 +1,107 @@
+/* Experience - Horizontal Scroll Section */
+.experience {
+  min-height: 100vh;
+  padding: var(--space-2xl) var(--container-padding);
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.experience-header {
+  max-width: var(--container-max);
+  margin: 0 auto var(--space-xl);
+}
+
+.experience-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.experience-title {
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  font-weight: var(--weight-light);
+  color: var(--color-black);
+  letter-spacing: var(--tracking-tight);
+}
+
+/* Track */
+.experience-track {
+  display: flex;
+  gap: var(--space-lg);
+  padding-left: var(--container-padding);
+}
+
+@media (max-width: 1023px) {
+  .experience-track {
+    flex-direction: column;
+    padding-left: 0;
+    gap: var(--space-xl);
+  }
+}
+
+/* Item */
+.experience-item {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 500px;
+  cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+  .experience-item {
+    max-width: 100%;
+  }
+}
+
+.experience-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  margin-bottom: var(--space-md);
+}
+
+.experience-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slower);
+}
+
+.experience-item:hover .experience-image {
+  transform: scale(1.05);
+}
+
+.experience-content {
+  padding: 0 var(--space-xs);
+}
+
+.experience-item-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-black);
+  margin-bottom: var(--space-xs);
+  letter-spacing: var(--tracking-tight);
+}
+
+.experience-desc {
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+}
+
+/* Reuse label styles */
+.experience .label-number {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  color: var(--color-noir-red);
+  letter-spacing: var(--tracking-wide);
+}
+
+.experience .label-text {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-regular);
+  color: var(--color-gray-500);
+  letter-spacing: var(--tracking-wide);
+}

@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0A0A0A;  /* Deep black */
+  --foreground: #F5F5F5;  /* Off-white */
+  --surface: #1A1A1A;
+  --surface-light: #2A2A2A;
+  --border: #333333;
+  
+  --primary: #D4A574;  /* Rose gold */
+  --primary-hover: #C89560;
+  --primary-light: #E0B888;
+  --secondary: #B8956A;  /* Muted gold */
+  --accent: #F0D9B5;  /* Light gold */
+  
+  --text-primary: #F5F5F5;
+  --text-secondary: #AAAAAA;
+  --text-muted: #777777;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-light: var(--surface-light);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(212, 165, 116, 0.2);
+  }
+  
+  /* Gold shimmer animation for text */
+  .gold-shimmer {
+    background: linear-gradient(
+      90deg,
+      var(--primary) 0%,
+      var(--accent) 25%,
+      #FFFFFF 50%,
+      var(--accent) 75%,
+      var(--primary) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  
+  /* 3D tilt effect base */
+  .card-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .card-3d:hover {
+    box-shadow: 0 25px 50px rgba(212, 165, 116, 0.25);
+  }
+  
+  /* Gallery zoom effect */
+  .gallery-zoom {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .gallery-zoom img {
+    transition: transform 0.6s ease;
+  }
+  
+  .gallery-zoom:hover img {
+    transform: scale(1.1);
+  }
+  
+  .gallery-zoom::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .gallery-zoom:hover::after {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease forwards;
+  opacity: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  background: rgba(0, 0, 0, 0.5);
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+}
+
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--primary) !important;
+}

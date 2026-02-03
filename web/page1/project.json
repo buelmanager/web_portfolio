@@ -1,0 +1,143 @@
+{
+  "id": "page1",
+  "name": "MAISON NOIR",
+  "nameEn": "MAISON NOIR",
+  "category": "Haute Couture Fashion House",
+  "concept": "파리지앵 오뜨 꾸뛰르 패션 하우스. 영원한 우아함의 재정의를 목표로 한 럭셔리 패션 브랜드 웹사이트.",
+  "tagline": "Eternal Elegance Redefined",
+
+  "design": {
+    "aesthetic": "Timeless Luxury, Editorial Fashion",
+    "colorPalette": {
+      "primary": "#FDFBF7",
+      "secondary": "#1A1A1A",
+      "accent": "#907533",
+      "muted": "#6B6B6B",
+      "background": "#FAF8F3"
+    },
+    "colorDescription": "아이보리 배경에 깊은 블랙과 골드 악센트. 파리지앵 럭셔리의 정수",
+    "typography": {
+      "headline": {
+        "font": "Cormorant Garamond",
+        "weights": [300, 400, 500, 600],
+        "style": "클래식 세리프로 우아함 표현"
+      },
+      "body": {
+        "font": "Inter",
+        "weights": [300, 400, 500, 600],
+        "style": "현대적 산세리프로 가독성 확보"
+      }
+    },
+    "layout": {
+      "type": "Full-screen Hero + Grid Cards",
+      "spacing": "대담한 여백과 비대칭 구성",
+      "navigation": "중앙 로고, 양측 메뉴"
+    }
+  },
+
+  "interactions": {
+    "smoothScroll": {
+      "library": "Lenis",
+      "duration": 1.2,
+      "wheelMultiplier": 1,
+      "description": "부드럽고 고급스러운 스크롤"
+    },
+    "cursor": {
+      "type": "Custom SVG Cursor",
+      "shape": "골드 화살표",
+      "hoverEffect": "스케일 확대"
+    },
+    "heroAnimation": {
+      "image": "scale 1.05, 5s duration",
+      "title": "word-by-word reveal, y: 100 → 0",
+      "overlay": "gradient opacity animation"
+    },
+    "statementSection": {
+      "images": "스크롤 기반 패럴랙스 (각기 다른 속도)",
+      "text": "단어별 페이드인 애니메이션",
+      "trigger": "viewport 80%"
+    },
+    "projectCards": {
+      "hover": "이미지 scale 1.05, 오버레이 다크닝",
+      "reveal": "y: 80 → 0, stagger: 0.15s"
+    },
+    "serviceItems": {
+      "animation": "좌측에서 슬라이드인",
+      "hover": "배경색 변화 + 화살표 이동"
+    }
+  },
+
+  "sections": [
+    {
+      "name": "Hero",
+      "description": "풀스크린 배경 이미지 + 대형 타이포그래피",
+      "elements": ["배경 이미지 (패럴랙스)", "오버레이 그라데이션", "ETERNAL ELEGANCE REDEFINED 타이틀", "스크롤 인디케이터"]
+    },
+    {
+      "name": "Statement",
+      "description": "브랜드 철학 섹션",
+      "layout": "떠다니는 이미지들 + 중앙 텍스트",
+      "animation": "이미지 패럴랙스 + 텍스트 워드별 페이드"
+    },
+    {
+      "name": "Featured Collections",
+      "description": "시그니처 컬렉션 그리드",
+      "collections": ["Nuit Éternelle (A/W)", "Lumière de Paris (S/S)", "Rêve Blanc (Bridal)", "Soirée Dorée (Evening)"],
+      "layout": "비대칭 그리드 (large + 2 small + wide)"
+    },
+    {
+      "name": "Services",
+      "description": "서비스 소개 (L'Art du Couture)",
+      "services": ["Haute Couture", "Prêt-à-Porter", "Private Appointments", "Bridal Atelier"],
+      "layout": "2컬럼 (텍스트 리스트 + 이미지)"
+    },
+    {
+      "name": "Testimonial",
+      "description": "인용문 섹션",
+      "quote": "Vogue Paris Editor 추천사"
+    },
+    {
+      "name": "Insights (Le Journal)",
+      "description": "저널/블로그 카드 그리드",
+      "layout": "3컬럼 카드"
+    },
+    {
+      "name": "Contact CTA",
+      "description": "상담 예약 CTA",
+      "background": "풀스크린 이미지",
+      "cta": "Book a Consultation"
+    }
+  ],
+
+  "techStack": {
+    "markup": "HTML5",
+    "styling": "CSS3 (Custom Properties)",
+    "scripting": "Vanilla JavaScript",
+    "animation": "GSAP 3.12.5",
+    "scrollPlugin": "GSAP ScrollTrigger",
+    "smoothScroll": "Lenis 1.1.13"
+  },
+
+  "responsive": {
+    "breakpoints": {
+      "desktop": "1024px+",
+      "tablet": "768px - 1023px",
+      "mobile": "< 768px"
+    },
+    "mobileAdjustments": [
+      "햄버거 메뉴",
+      "풀스크린 모바일 네비게이션",
+      "그리드 단일 컬럼",
+      "이미지 비율 조정"
+    ]
+  },
+
+  "files": [
+    "index.html",
+    "styles.css",
+    "main.js"
+  ],
+
+  "createdAt": "2024-01-27",
+  "lastUpdated": "2024-01-27"
+}

@@ -1,0 +1,158 @@
+{
+  "id": "page3",
+  "name": "MAISON ÉLISE",
+  "nameEn": "MAISON ÉLISE",
+  "category": "Luxury Perfume Brand",
+  "concept": "프랑스 럭셔리 향수 브랜드. 감각적인 향의 예술과 우아함의 조화.",
+  "tagline": "L'Art du Parfum",
+
+  "design": {
+    "aesthetic": "Soft Luxury, Feminine Elegance",
+    "colorPalette": {
+      "primary": "#FAF7F2",
+      "secondary": "#2D2D2D",
+      "accent": "#C4A77D",
+      "nude": "#E8D5C4",
+      "rose": "#D4A5A5",
+      "cream": "#F5F0E8"
+    },
+    "colorDescription": "부드러운 크림/누드 톤에 로즈골드 악센트. 향수의 우아함과 여성스러움 표현",
+    "typography": {
+      "headline": {
+        "font": "Cormorant Garamond",
+        "weights": [300, 400],
+        "style": "이탤릭 세리프로 우아함 극대화"
+      },
+      "body": {
+        "font": "Jost",
+        "weights": [300, 400],
+        "style": "가벼운 산세리프로 세련미"
+      },
+      "accent": {
+        "letterSpacing": "0.15em",
+        "style": "italic"
+      }
+    },
+    "layout": {
+      "type": "Flowing Organic Layout",
+      "spacing": "부드러운 곡선과 여백",
+      "navigation": "미니멀 투명 헤더"
+    }
+  },
+
+  "interactions": {
+    "smoothScroll": {
+      "library": "Lenis",
+      "duration": 1.5,
+      "easing": "smooth exponential",
+      "description": "실크처럼 부드러운 스크롤"
+    },
+    "heroAnimation": {
+      "perfumeBottle": "3D 회전 + 글로우 효과",
+      "particles": "플로팅 향 파티클",
+      "title": "블러 → 선명 전환"
+    },
+    "productReveal": {
+      "type": "Mask reveal",
+      "shape": "원형 또는 유기적 형태",
+      "duration": "1.2s",
+      "filter": "blur(10px) → blur(0)"
+    },
+    "scentNotes": {
+      "animation": "스크롤 기반 레이어 공개",
+      "layers": ["Top Note", "Heart Note", "Base Note"],
+      "visual": "색상 그라데이션 변화"
+    },
+    "ingredientSection": {
+      "images": "호버 시 확대 + 설명 표시",
+      "parallax": "다른 속도의 레이어",
+      "connection": "재료 연결선 애니메이션"
+    },
+    "bottleCustomizer": {
+      "rotation": "드래그로 360도 회전",
+      "engraving": "커스텀 각인 미리보기",
+      "color": "캡/리본 색상 선택"
+    }
+  },
+
+  "sections": [
+    {
+      "name": "Hero",
+      "description": "몽환적인 향수병 중심 히어로",
+      "elements": ["3D 향수병 (회전)", "플로팅 파티클", "브랜드 타이틀", "향 소개 텍스트"],
+      "background": "소프트 그라데이션"
+    },
+    {
+      "name": "Story",
+      "description": "브랜드 스토리",
+      "content": "프랑스 그라스 지역의 전통과 현대의 조화",
+      "layout": "이미지 + 텍스트 교차"
+    },
+    {
+      "name": "Collections",
+      "description": "향수 컬렉션",
+      "collections": ["Fleur de Nuit", "Rose Éternelle", "Bois Précieux", "Jardin Secret"],
+      "layout": "가로 스크롤 갤러리"
+    },
+    {
+      "name": "Scent Pyramid",
+      "description": "향 피라미드 시각화",
+      "layers": {
+        "top": "Bergamot, Pink Pepper",
+        "heart": "Rose, Jasmine, Iris",
+        "base": "Sandalwood, Musk, Amber"
+      },
+      "animation": "스크롤 기반 레이어 공개"
+    },
+    {
+      "name": "Ingredients",
+      "description": "원료 소개",
+      "ingredients": ["그라스 로즈", "이집트 재스민", "인도 샌달우드", "이탈리안 베르가못"],
+      "layout": "호버 인터랙션 그리드"
+    },
+    {
+      "name": "Ritual",
+      "description": "향수 사용법",
+      "steps": ["Pulse Points", "Hair Mist", "Clothes", "Space"],
+      "animation": "단계별 애니메이션"
+    },
+    {
+      "name": "Personalization",
+      "description": "커스터마이징 옵션",
+      "options": ["병 각인", "기프트 박스", "리본 색상"],
+      "interactive": "실시간 미리보기"
+    }
+  ],
+
+  "techStack": {
+    "markup": "HTML5",
+    "styling": "CSS3 (Custom Properties)",
+    "scripting": "Vanilla JavaScript",
+    "animation": "GSAP 3.12.5",
+    "scrollPlugin": "GSAP ScrollTrigger",
+    "smoothScroll": "Lenis 1.1.13"
+  },
+
+  "responsive": {
+    "breakpoints": {
+      "desktop": "1024px+",
+      "tablet": "768px - 1023px",
+      "mobile": "< 768px"
+    },
+    "mobileAdjustments": [
+      "향수병 크기 축소",
+      "파티클 수 감소",
+      "가로 스크롤 → 스와이프",
+      "터치 제스처 최적화"
+    ]
+  },
+
+  "files": [
+    "index.html",
+    "styles.css",
+    "main.js"
+  ],
+
+  "createdAt": "2024-01-27",
+  "lastUpdated": "2024-01-27"
+}
