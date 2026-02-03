@@ -1,4 +1,4 @@
 1:"$Sreact.fragment"
-2:I[36328,["/_next/static/chunks/aa531226bddde186.js","/_next/static/chunks/94db50d63a7508e6.js"],"default"]
-3:I[19444,["/_next/static/chunks/aa531226bddde186.js","/_next/static/chunks/94db50d63a7508e6.js"],"default"]
-0:{"buildId":"kgGPsP6QLkGF1wQhxM-g3","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
+2:I[36328,["/projects/atlas/_next/static/chunks/aa531226bddde186.js","/projects/atlas/_next/static/chunks/94db50d63a7508e6.js"],"default"]
+3:I[19444,["/projects/atlas/_next/static/chunks/aa531226bddde186.js","/projects/atlas/_next/static/chunks/94db50d63a7508e6.js"],"default"]
+0:{"buildId":"35ZKV0dtnYSitkHh8h2Ww","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
