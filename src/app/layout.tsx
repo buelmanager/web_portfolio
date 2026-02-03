@@ -1,25 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Serif_KR } from "next/font/google";
+import LenisProvider from "@/components/providers/LenisProvider";
+import Preloader from "@/components/ui/Preloader";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const notoSerifKR = Noto_Serif_KR({
+  variable: "--font-noto-serif-kr",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["200", "300", "400", "500"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "웹 포트폴리오 | Web Projects Showcase",
-  description: "다양한 웹 프로젝트들을 소개하는 포트폴리오 사이트입니다.",
-  keywords: ["포트폴리오", "웹개발", "Next.js", "React", "프론트엔드"],
-  authors: [{ name: "Developer" }],
+  title: "Creative Developer & Designer - Portfolio",
+  description: "크리에이티브 디렉터 포트폴리오. 브랜딩, 디자인, 아트 디렉션.",
+  keywords: ["포트폴리오", "웹개발", "브랜딩", "디자인", "아트 디렉션"],
+  authors: [{ name: "Creative Director" }],
   openGraph: {
-    title: "웹 포트폴리오 | Web Projects Showcase",
-    description: "다양한 웹 프로젝트들을 소개하는 포트폴리오 사이트입니다.",
+    title: "Creative Developer & Designer - Portfolio",
+    description: "크리에이티브 디렉터 포트폴리오. 브랜딩, 디자인, 아트 디렉션.",
     type: "website",
   },
 };
@@ -31,10 +30,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
-      >
-        {children}
+      <head>
+        <link
+          rel="preconnect"
+          href="https://cdn.jsdelivr.net"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`${notoSerifKR.variable} antialiased`}>
+        <Preloader />
+        <LenisProvider>
+          {children}
+        </LenisProvider>
       </body>
     </html>
   );

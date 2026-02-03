@@ -1,77 +1,71 @@
 'use client'
 
-import FadeInSection from '@/components/animations/FadeInSection'
-import TextReveal from '@/components/animations/TextReveal'
-import { Code2, Layers, Sparkles, Zap } from 'lucide-react'
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-const techStack = [
-  { name: 'Next.js 16', icon: Layers, description: '최신 App Router 기반' },
-  { name: 'React 19', icon: Code2, description: 'Server Components 지원' },
-  { name: 'TypeScript', icon: Zap, description: '타입 안전성 보장' },
-  { name: 'GSAP', icon: Sparkles, description: '부드러운 애니메이션' },
-]
+gsap.registerPlugin(ScrollTrigger)
 
 export default function About() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const introRef = useRef<HTMLParagraphElement>(null)
+  const descRef = useRef<HTMLParagraphElement>(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        introRef.current,
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+          }
+        }
+      )
+
+      gsap.fromTo(
+        descRef.current,
+        { y: 30, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: 0.3,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+          }
+        }
+      )
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <section id="about" className="py-24 px-4 md:px-8 lg:px-16 bg-surface">
-      <div className="max-w-5xl mx-auto">
-        <FadeInSection className="text-center mb-16">
-          <TextReveal 
-            text="소개" 
-            className="text-4xl md:text-5xl font-bold mb-4"
-          />
-          <p className="text-text-secondary max-w-2xl mx-auto">
-            이 포트폴리오는 다양한 웹 프로젝트들을 자동으로 발견하고 
-            소개하는 쇼케이스입니다. 각 프로젝트는 독립적으로 실행 가능합니다.
-          </p>
-        </FadeInSection>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          {techStack.map((tech, index) => (
-            <FadeInSection 
-              key={tech.name} 
-              delay={index * 0.1}
-              direction={index % 2 === 0 ? 'left' : 'right'}
-            >
-              <div className="flex items-start gap-4 p-6 bg-background rounded-2xl border border-border hover:border-primary/30 transition-colors">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <tech.icon className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg text-text-primary mb-1">
-                    {tech.name}
-                  </h3>
-                  <p className="text-text-secondary text-sm">
-                    {tech.description}
-                  </p>
-                </div>
-              </div>
-            </FadeInSection>
-          ))}
+    <section ref={sectionRef} className="about" id="about">
+      <div className="about-content">
+        <div className="about-header">
+          <span className="section-label">About</span>
         </div>
-
-        <FadeInSection>
-          <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 border border-border text-center">
-            <h3 className="text-2xl font-bold mb-4">프로젝트 자동 발견</h3>
-            <p className="text-text-secondary mb-6">
-              <code className="px-2 py-1 bg-background rounded text-primary text-sm">web/</code> 
-              폴더 내의 모든 프로젝트를 자동으로 스캔하여 표시합니다.
-              <br />
-              새 프로젝트를 추가하면 자동으로 포트폴리오에 반영됩니다.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <span className="px-4 py-2 bg-background rounded-full text-sm border border-border">
-                Tailwind CSS 4
-              </span>
-              <span className="px-4 py-2 bg-background rounded-full text-sm border border-border">
-                Lucide Icons
-              </span>
-              <span className="px-4 py-2 bg-background rounded-full text-sm border border-border">
-                ScrollTrigger
-              </span>
-            </div>
-          </div>
-        </FadeInSection>
+        <div className="about-text">
+          <p ref={introRef} className="about-intro">
+            브랜드의 본질을 시각화하는<br />
+            크리에이티브 디렉터
+          </p>
+          <p ref={descRef} className="about-description">
+            서울을 기반으로 활동하며, 럭셔리 브랜드의 디지털 경험 디자인을 전문으로 합니다.
+            브랜드 아이덴티티부터 웹사이트, 캠페인까지 통합적인 크리에이티브 디렉션을 제공합니다.
+          </p>
+        </div>
       </div>
     </section>
   )
